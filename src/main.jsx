@@ -14,6 +14,7 @@ import Contact from './components/Contact/Contact.jsx'
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx'
 import AddEqp from './components/AddEqp/AddEqp.jsx'
 import EqpList from './components/EqpList/EqpList.jsx'
+import EqpUpdate from './components/EqpUpdate/EqpUpdate.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path : '/EqpList',
         element : <Private> <EqpList></EqpList></Private>
+      },
+      {
+        path : '/update-equipment/:id',
+        element : <Private> <EqpUpdate></EqpUpdate></Private>
       },
       {
         path: '/about',
