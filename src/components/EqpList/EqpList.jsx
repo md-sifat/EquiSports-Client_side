@@ -46,6 +46,7 @@ const EqpList = () => {
                                     className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700"
                                 >
                                     Update
+                                    
                                 </Link>
                                 <button
                                     onClick={() => handleDelete(equipment._id)}
