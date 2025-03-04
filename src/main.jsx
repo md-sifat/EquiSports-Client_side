@@ -12,6 +12,7 @@ import EquipmentD from './components/EquipmentD/EquipmentD.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx'
+import AddEqp from './components/AddEqp/AddEqp.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/equipments/:id',
         element: <Private> <EquipmentD></EquipmentD></Private>
+      },
+      {
+        path : 'addEqp',
+        element : <Private> <AddEqp></AddEqp></Private>
       },
       {
         path: '/about',
