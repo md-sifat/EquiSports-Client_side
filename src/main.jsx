@@ -13,6 +13,7 @@ import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx'
 import AddEqp from './components/AddEqp/AddEqp.jsx'
+import EqpList from './components/EqpList/EqpList.jsx'
 
 const router = createBrowserRouter([
   {
@@ -40,8 +41,12 @@ const router = createBrowserRouter([
         element: <Private> <EquipmentD></EquipmentD></Private>
       },
       {
-        path : 'addEqp',
+        path : '/addEqp',
         element : <Private> <AddEqp></AddEqp></Private>
+      },
+      {
+        path : '/EqpList',
+        element : <Private> <EqpList></EqpList></Private>
       },
       {
         path: '/about',

@@ -40,7 +40,7 @@ const Navbar = () => {
           <Link to={'/equipments'} className="text-white hover:text-gray-400">Equipments</Link>
           <Link to={'/contact'} className="text-white hover:text-gray-400">Contact</Link>
           <Link to={'/addEqp'} className="text-white hover:text-gray-400">Add Equipments</Link>
-          <Link to={'/'} className="text-white hover:text-gray-400">Profile</Link>
+          <Link to={'/EqpList'} className="text-white hover:text-gray-400">Equipments List</Link>
         </div>
 
         <div className="sm:hidden flex items-center">
@@ -90,7 +90,7 @@ const Navbar = () => {
         <Link to={'/equipments'} className="block text-white py-2">Equipments</Link>
         <Link to={'/contact'} className="block text-white py-2">Contact</Link>
         <Link to={'/addEqp'} className="block text-white py-2">Add Equipments</Link>
-        <Link to={'/'} className="block text-white py-2">Profile</Link>
+        <Link to={'/Equipments'} className="block text-white py-2">Equipments List</Link>
       </div>
     </nav>
   );
