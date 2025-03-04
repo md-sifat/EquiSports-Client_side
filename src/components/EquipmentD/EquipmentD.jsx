@@ -4,6 +4,8 @@ import { authContext } from "../AuthProvider/AuthProvider";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import PropTypes from "prop-types";
 
+
+
 const StarRating = ({ rating }) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
