@@ -86,11 +86,11 @@ const Navbar = () => {
 
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden bg-gray-900 p-4 rounded-lg mt-2`}>
         <Link to={'/'} className="block text-white py-2">Home</Link>
-        <Link to={'/about'} className="block text-white py-2">About</Link>
         <Link to={'/equipments'} className="block text-white py-2">Equipments</Link>
-        <Link to={'/contact'} className="block text-white py-2">Contact</Link>
         <Link to={'/addEqp'} className="block text-white py-2">Add Equipments</Link>
-        <Link to={'/Equipments'} className="block text-white py-2">Equipments List</Link>
+        <Link to={'/EqpList'} className="block text-white py-2">Equipments List</Link>
+        <Link to={'/about'} className="block text-white py-2">About</Link>
+        <Link to={'/contact'} className="block text-white py-2">Contact</Link>
       </div>
     </nav>
   );
