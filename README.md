@@ -3,7 +3,7 @@
 EquiSports is an e-commerce platform designed to provide a seamless shopping experience for sports enthusiasts. Customers can browse, purchase, and review various sports accessories across different sports categories.
 
 ## 🚀 Live Site
-[https://thriving-chebakia-329ddc.netlify.app/](#)
+[EquiSports](https://thriving-chebakia-329ddc.netlify.app/)
 
 ## 📌 Features
 - 🏀 **Browse & Purchase Sports Equipment** - Wide range of sports gear and accessories.
