@@ -18,6 +18,8 @@ const StarRating = ({ rating }) => {
     return <div className="flex">{stars}</div>;
 };
 
+
+
 const EquipmentPage = () => {
     const { user } = useContext(authContext);
     const [equipments, setEquipments] = useState([]);
