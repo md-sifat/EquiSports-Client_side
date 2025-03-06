@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import img1 from '../../assets/slider/img1.jpg'
-import img2 from '../../assets/slider/img2.webp'
-import img3 from '../../assets/slider/img3.webp'
+import img2 from '../../assets/slider/img2.jpg'
+import img3 from '../../assets/slider/img3.jpg'
 import { Link } from 'react-router-dom';
 
 const Slider = () => {

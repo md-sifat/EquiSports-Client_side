@@ -36,11 +36,11 @@ const Navbar = () => {
 
         <div className="hidden sm:flex space-x-8 text-lg">
           <Link to={'/'} className="text-white hover:text-gray-400">Home</Link>
-          <Link to={'/about'} className="text-white hover:text-gray-400">About</Link>
           <Link to={'/equipments'} className="text-white hover:text-gray-400">Equipments</Link>
-          <Link to={'/contact'} className="text-white hover:text-gray-400">Contact</Link>
           <Link to={'/addEqp'} className="text-white hover:text-gray-400">Add Equipments</Link>
           <Link to={'/EqpList'} className="text-white hover:text-gray-400">Equipments List</Link>
+          <Link to={'/about'} className="text-white hover:text-gray-400">About</Link>
+          <Link to={'/contact'} className="text-white hover:text-gray-400">Contact</Link>
         </div>
 
         <div className="sm:hidden flex items-center">

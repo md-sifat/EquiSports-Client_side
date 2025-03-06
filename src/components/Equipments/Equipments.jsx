@@ -21,55 +21,67 @@ const StarRating = ({ rating }) => {
 const EquipmentPage = () => {
     const { user } = useContext(authContext);
     const [equipments, setEquipments] = useState([]);
-    
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         fetch("https://equi-sports-server-side-beryl.vercel.app/equipments")
             .then((response) => response.json())
-            .then((data) => setEquipments(data))
-            .catch((error) => console.error("Error fetching equipments:", error));
+            .then((data) => {
+                setEquipments(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching equipments:", error);
+                setLoading(false);
+            });
     }, []);
-
-    console.log(equipments)
 
     return (
         <div className="flex w-full justify-center py-10 bg-gray-900">
             <div className="w-full max-w-5xl">
                 <h2 className="text-3xl font-bold text-center mb-8 text-white">Our Equipment</h2>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4">
-                    {equipments.map((equipment) => (
-                        <div key={equipment._id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-600 p-4">
-                            <img
-                                src={equipment.image || "https://via.placeholder.com/300?text=No+Image"}
-                                alt={equipment.itemName}
-                                className="w-full h-40 object-cover rounded-md"
-                            />
-                            <div className="mt-4">
-                                <h3 className="text-lg font-semibold text-white">{equipment.itemName}</h3>
-                                <p className="text-sm text-gray-400 flex items-center gap-1">
-                                    <MdCategory className="text-blue-500" /> {equipment.category}
-                                </p>
-                                <p className="text-gray-300 mt-2 text-sm">{equipment.description}</p>
-                                <div className="flex justify-between items-center mt-4 text-sm">
-                                    <span className="text-blue-600 font-semibold flex items-center gap-1">
-                                        <MdAttachMoney className="text-green-600" /> {equipment.price}
-                                    </span>
-                                    <span className="text-gray-500 flex items-center gap-1">
-                                        <MdDateRange className="text-red-500" /> {equipment.processingTime}
-                                    </span>
-                                </div>
-                                <div className="flex justify-between items-center mt-2">
-                                    <StarRating rating={equipment.rating} />
-                                    <Link
-                                        to={`/equipments/${equipment._id}`}
-                                        className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700"
-                                    >
-                                        Learn More
-                                    </Link>
+
+                {loading ? (
+                    <div className="flex justify-center items-center py-20">
+                        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                ) : (
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4">
+                        {equipments.map((equipment) => (
+                            <div key={equipment._id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-600 p-4">
+                                <img
+                                    src={equipment.image || "https://via.placeholder.com/300?text=No+Image"}
+                                    alt={equipment.itemName}
+                                    className="w-full h-40 object-cover rounded-md"
+                                />
+                                <div className="mt-4">
+                                    <h3 className="text-lg font-semibold text-white">{equipment.itemName}</h3>
+                                    <p className="text-sm text-gray-400 flex items-center gap-1">
+                                        <MdCategory className="text-blue-500" /> {equipment.category}
+                                    </p>
+                                    <p className="text-gray-300 mt-2 text-sm">{equipment.description}</p>
+                                    <div className="flex justify-between items-center mt-4 text-sm">
+                                        <span className="text-blue-600 font-semibold flex items-center gap-1">
+                                            <MdAttachMoney className="text-green-600" /> {equipment.price}
+                                        </span>
+                                        <span className="text-gray-500 flex items-center gap-1">
+                                            <MdDateRange className="text-red-500" /> {equipment.processingTime}
+                                        </span>
+                                    </div>
+                                    <div className="flex justify-between items-center mt-2">
+                                        <StarRating rating={equipment.rating} />
+                                        <Link
+                                            to={`/equipments/${equipment._id}`}
+                                            className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700"
+                                        >
+                                            Learn More
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
