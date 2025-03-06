@@ -1,12 +1,25 @@
-# React + Vite
+# EquiSports - Sports Equipment Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EquiSports is an e-commerce platform designed to provide a seamless shopping experience for sports enthusiasts. Customers can browse, purchase, and review various sports accessories across different sports categories.
 
-Currently, two official plugins are available:
+## 🚀 Live Site
+[Live Demo](#)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- 🏀 **Browse & Purchase Sports Equipment** - Wide range of sports gear and accessories.
+- 🔒 **User Authentication** - Secure login and registration system with Firebase.
+- 🛒 **Add & Manage Equipment** - Users can add, update, and delete their listings.
+- 🎨 **Dark/Light Theme** - Toggle between dark and light modes.
+- ⚡ **Fast & Responsive** - Built using React and Tailwind CSS for a smooth experience.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** Firebase
+- **Hosting:** Netlify (Frontend), Vercel (Backend)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔧 Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/md-sifat/EquiSports-Client_side
+   cd EquiSports
