@@ -31,7 +31,7 @@ const EquipmentD = () => {
   useEffect(() => {
     const fetchEquipment = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/equipments/${id}`);
+        const response = await fetch(`https://equi-sports-server-side-beryl.vercel.app/equipments/${id}`);
         if (!response.ok) {
           throw new Error("Equipment not found");
         }

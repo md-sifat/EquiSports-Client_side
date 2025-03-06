@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     const [equipment, setEquipment] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/equipments')
+        fetch('https://equi-sports-server-side-beryl.vercel.app/equipments')
             .then(res => res.json())
             .then(data => setEquipment(data))
             .catch(error => console.error('Error fetching equipment:', error));

@@ -15,7 +15,7 @@ const EqpUpdate = () => {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5000/equipments/${id}`)
+        fetch(`https://equi-sports-server-side-beryl.vercel.app/equipments/${id}`)
             .then((response) => response.json())
             .then((data) => setEquipment(data))
             .catch((error) => toast.error("Error fetching equipment details!"));
@@ -28,7 +28,7 @@ const EqpUpdate = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/equipments/${id}`, {
+            const response = await fetch(`https://equi-sports-server-side-beryl.vercel.app/equipments/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(equipment),

@@ -34,7 +34,7 @@ const AddEqp = () => {
         };
 
         // Post the data to the backend (assuming you have a route /add-equipment)
-        fetch("http://localhost:5000/equipments", {
+        fetch("https://equi-sports-server-side-beryl.vercel.app/equipments", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

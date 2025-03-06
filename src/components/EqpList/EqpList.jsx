@@ -5,7 +5,7 @@ const EqpList = () => {
     const [equipments, setEquipments] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/equipments")
+        fetch("https://equi-sports-server-side-beryl.vercel.app/equipments")
             .then((response) => response.json())
             .then((data) => setEquipments(data))
             .catch((error) => console.error("Error fetching equipments:", error));
@@ -16,7 +16,7 @@ const EqpList = () => {
         if (!confirmDelete) return;
 
         try {
-            const response = await fetch(`http://localhost:5000/equipments/${id}`, {
+            const response = await fetch(`https://equi-sports-server-side-beryl.vercel.app/equipments/${id}`, {
                 method: "DELETE",
             });
 

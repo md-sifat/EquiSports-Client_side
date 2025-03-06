@@ -23,7 +23,7 @@ const EquipmentPage = () => {
     const [equipments, setEquipments] = useState([]);
     
     useEffect(() => {
-        fetch("http://localhost:5000/equipments")
+        fetch("https://equi-sports-server-side-beryl.vercel.app/equipments")
             .then((response) => response.json())
             .then((data) => setEquipments(data))
             .catch((error) => console.error("Error fetching equipments:", error));

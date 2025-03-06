@@ -25,7 +25,7 @@ const Register = () => {
                 };
 
                 // Send the user data to your backend (MongoDB)
-                fetch('http://localhost:5000/users', {
+                fetch('https://equi-sports-server-side-beryl.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Register = () => {
                         };
 
                         // Send user data to MongoDB using fetch
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://equi-sports-server-side-beryl.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
